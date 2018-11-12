@@ -11,7 +11,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity   //表示其为实体类
 @Table(name = "category") //表名
-@JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
+@JsonIgnoreProperties({ "handler","hibernateLazyInitializer" }) //前后端分离，所以要Json格式
+//Category对象就会转化为json数据
 
 
 public class Category {
