@@ -13,6 +13,7 @@ import com.how2java.tmall.pojo.Category;
 //创建一个sort对象，然后通过id排序，然后用DAO查询
 public class CategoryService {
     @Autowired CategoryDAO categoryDAO; //自动装配上个DAO对象的
+    //创建sort对象，通过id排序，实现DAO查询
     public List<Category> list(){
         Sort sort = new Sort(Sort.Direction.DESC,"id");
         return categoryDAO.findAll(sort);
